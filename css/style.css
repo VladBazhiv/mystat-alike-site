@@ -1,0 +1,113 @@
+.bg-dark {
+  background-color: #339fca !important;
+}
+
+.nav-link:active {
+  transform: scale(0.95);
+}
+
+.main .lessons .btn-group {
+  width: 100%;
+}
+
+.main .lessons .btn-group .btn {
+  width: 8%;
+  padding: 0.3em 0.5rem;
+  border-bottom: 1px solid lightgray;
+  font-size: 1.2rem;
+  color: rgb(132, 194, 214);
+}
+.main .lessons .btn-group .btn:hover {
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 5px 5px 0 0;
+  color: rgb(100, 161, 182);
+}
+
+.main .lessons .btn-group .leftover {
+  width: 36%;
+  border-bottom: 1px solid lightgray;
+}
+
+.main .lessons .btn-group .btn-check:checked + .btn {
+  border: 1px solid lightgray;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  color: inherit;
+}
+
+.main .lessons .btn-group .btn-check:focus:checked + .btn {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.main .schedule .add-hw tr th {
+  font-size: small;
+  color: lightgray;
+}
+.main .schedule .add-hw tr > * {
+  padding: 0.3rem 2rem;
+}
+
+.main .schedule .add-hw tr td .btn,
+.main .schedule .add-hw tr td .border {
+  min-height: 3rem;
+  border-radius: 5px;
+}
+.main .schedule .add-hw tr td .btn {
+  background-color: #339fca;
+  border: none;
+}
+
+.main .schedule .students input[type="radio"] {
+  display: none;
+}
+.main .schedule .students .rad {
+  width: 1rem;
+  height: 1rem;
+  margin-inline: 0.3rem;
+  outline: 1px solid green;
+  outline-offset: 1px;
+  border-radius: 50%;
+  position: relative;
+}
+.main .schedule .students .rad.late {
+  outline: 1px solid yellow;
+}
+.main .schedule .students .rad.misses {
+  outline: 1px solid red;
+}
+
+.main .schedule .students input[type="radio"]:checked + .rad::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  inset: 0 0;
+  background-color: green;
+  border-radius: 50%;
+}
+.main .schedule .students input[type="radio"]:checked + .rad.late::after {
+  background-color: yellow;
+}
+.main .schedule .students input[type="radio"]:checked + .rad.misses::after {
+  background-color: red;
+}
+
+.main .schedule .students thead tr {
+  background-color: #abdbee;
+  border-bottom: 2px solid lightgray;
+}
+.main .schedule .students thead tr th {
+  font-weight: normal !important;
+}
+.main .schedule .students select,
+.main .schedule .students textarea {
+  max-width: 7vw;
+  padding: 0.3rem;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+.main .schedule .students textarea {
+  min-width: 90%;
+  margin: 0;
+}
