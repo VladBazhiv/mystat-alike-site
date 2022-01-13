@@ -2,6 +2,10 @@
   background-color: #339fca !important;
 }
 
+.bg-lightgray {
+  background-color: lightgray;
+}
+
 .nav-link:active {
   transform: scale(0.95);
 }
@@ -110,4 +114,15 @@
 .main .schedule .students textarea {
   min-width: 90%;
   margin: 0;
+}
+
+.homework-modal .modal-body input {
+  min-height: 2.5rem;
+  border-radius: 5px 0 0 5px;
+}
+.homework-modal .modal-body input[type="button"] {
+  border-radius: 0 5px 5px 0;
+}
+.homework-modal .modal-body input[type="button"]:hover {
+  background-color: rgb(163, 163, 163);
 }

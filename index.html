@@ -103,7 +103,9 @@
               <td class="text-uppercase">abc-1234</td>
               <td>CSS & HTML</td>
               <td><input type="text" id="ls-topic" class="container-fluid border" /></td>
-              <td><button class="btn btn-primary fw-bold">Add Homework</button></td>
+              <td>
+                <button class="btn btn-primary fw-bold" type="button" data-bs-toggle="modal" data-bs-target="#homeworkModal">Add Homework</button>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -157,116 +159,142 @@
               </td>
             </tr>
             <tr class="text-center">
-                <th scope="row">2</th>
-                <td class="text-start">Misha Roberson</td>
-                <td>9</td>
-                <td>
-                  <input type="radio" name="present-1" id="present1" />
-                  <label class="rad" for="present1"></label>
-                  <input type="radio" name="present-1" id="late1" />
-                  <label class="rad late" for="late1"></label>
-                  <input type="radio" name="present-1" id="misses1" />
-                  <label class="rad misses" for="misses1"></label>
-                </td>
-                <td>
-                  <select class="container-fluid" name="test" id="test-mark">
-                    <option value="none">-</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                </td>
-                <td>
-                  <select class="container-fluid" name="classwork" id="test-mark">
-                    <option value="none">-</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                </td>
-                <td class="d-flex align-items-center justify-content-center">
-                  <textarea name="comment" id="comment" cols="10" rows="1"></textarea>
-                </td>
-              </tr>
-              <tr class="text-center">
-                  <th scope="row">3</th>
-                  <td class="text-start">Jeydon Metcalfe</td>
-                  <td>11</td>
-                  <td>
-                    <input type="radio" name="present-1" id="present1" />
-                    <label class="rad" for="present1"></label>
-                    <input type="radio" name="present-1" id="late1" />
-                    <label class="rad late" for="late1"></label>
-                    <input type="radio" name="present-1" id="misses1" />
-                    <label class="rad misses" for="misses1"></label>
-                  </td>
-                  <td>
-                    <select class="container-fluid" name="test" id="test-mark">
-                      <option value="none">-</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                    </select>
-                  </td>
-                  <td>
-                    <select class="container-fluid" name="classwork" id="test-mark">
-                      <option value="none">-</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                    </select>
-                  </td>
-                  <td class="d-flex align-items-center justify-content-center">
-                    <textarea name="comment" id="comment" cols="10" rows="1"></textarea>
-                  </td>
-                </tr>
-                <tr class="text-center">
-                    <th scope="row">4</th>
-                    <td class="text-start">Gary Jacobson</td>
-                    <td>10</td>
-                    <td>
-                      <input type="radio" name="present-1" id="present1" />
-                      <label class="rad" for="present1"></label>
-                      <input type="radio" name="present-1" id="late1" />
-                      <label class="rad late" for="late1"></label>
-                      <input type="radio" name="present-1" id="misses1" />
-                      <label class="rad misses" for="misses1"></label>
-                    </td>
-                    <td>
-                      <select class="container-fluid" name="test" id="test-mark">
-                        <option value="none">-</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                      </select>
-                    </td>
-                    <td>
-                      <select class="container-fluid" name="classwork" id="test-mark">
-                        <option value="none">-</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                      </select>
-                    </td>
-                    <td class="d-flex align-items-center justify-content-center">
-                      <textarea name="comment" id="comment" cols="10" rows="1"></textarea>
-                    </td>
-                  </tr>
+              <th scope="row">2</th>
+              <td class="text-start">Misha Roberson</td>
+              <td>9</td>
+              <td>
+                <input type="radio" name="present-1" id="present1" />
+                <label class="rad" for="present1"></label>
+                <input type="radio" name="present-1" id="late1" />
+                <label class="rad late" for="late1"></label>
+                <input type="radio" name="present-1" id="misses1" />
+                <label class="rad misses" for="misses1"></label>
+              </td>
+              <td>
+                <select class="container-fluid" name="test" id="test-mark">
+                  <option value="none">-</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+              <td>
+                <select class="container-fluid" name="classwork" id="test-mark">
+                  <option value="none">-</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+              <td class="d-flex align-items-center justify-content-center">
+                <textarea name="comment" id="comment" cols="10" rows="1"></textarea>
+              </td>
+            </tr>
+            <tr class="text-center">
+              <th scope="row">3</th>
+              <td class="text-start">Jeydon Metcalfe</td>
+              <td>11</td>
+              <td>
+                <input type="radio" name="present-1" id="present1" />
+                <label class="rad" for="present1"></label>
+                <input type="radio" name="present-1" id="late1" />
+                <label class="rad late" for="late1"></label>
+                <input type="radio" name="present-1" id="misses1" />
+                <label class="rad misses" for="misses1"></label>
+              </td>
+              <td>
+                <select class="container-fluid" name="test" id="test-mark">
+                  <option value="none">-</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+              <td>
+                <select class="container-fluid" name="classwork" id="test-mark">
+                  <option value="none">-</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+              <td class="d-flex align-items-center justify-content-center">
+                <textarea name="comment" id="comment" cols="10" rows="1"></textarea>
+              </td>
+            </tr>
+            <tr class="text-center">
+              <th scope="row">4</th>
+              <td class="text-start">Gary Jacobson</td>
+              <td>10</td>
+              <td>
+                <input type="radio" name="present-1" id="present1" />
+                <label class="rad" for="present1"></label>
+                <input type="radio" name="present-1" id="late1" />
+                <label class="rad late" for="late1"></label>
+                <input type="radio" name="present-1" id="misses1" />
+                <label class="rad misses" for="misses1"></label>
+              </td>
+              <td>
+                <select class="container-fluid" name="test" id="test-mark">
+                  <option value="none">-</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+              <td>
+                <select class="container-fluid" name="classwork" id="test-mark">
+                  <option value="none">-</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+              <td class="d-flex align-items-center justify-content-center">
+                <textarea name="comment" id="comment" cols="10" rows="1"></textarea>
+              </td>
+            </tr>
           </tbody>
         </table>
       </section>
+
+      <!-- Modal -->
+      <div class="modal fade homework-modal" id="homeworkModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New Homework</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="topic">
+                <label for="topic">Topic:</label>
+                <input class="d-block container-fluid border my-1" type="text" name="topic" id="topic" />
+              </div>
+              <div class="file d-flex align-items-center">
+                <input class="border container-fluid  my-3" type="text" name="file-name" id="f-name" placeholder="Choose file..." />
+                <input type="button"value="Browse"class="btn border bg-lightgray"/>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <script src="https://kit.fontawesome.com/4d9400318f.js" crossorigin="anonymous"></script>
