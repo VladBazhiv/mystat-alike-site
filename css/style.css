@@ -44,22 +44,36 @@
   outline: none !important;
 }
 
+.main .schedule .show-hw tr th,
 .main .schedule .add-hw tr th {
   font-size: small;
   color: lightgray;
 }
+.main .schedule .show-hw tr > *,
 .main .schedule .add-hw tr > * {
   padding: 0.3rem 2rem;
 }
 
-.main .schedule .add-hw tr td .btn,
+.main .schedule .show-hw tr td .border,
 .main .schedule .add-hw tr td .border {
   min-height: 3rem;
   border-radius: 5px;
 }
+.main .schedule .show-hw tr td .btn,
 .main .schedule .add-hw tr td .btn {
+  min-height: 3rem;
   background-color: #339fca;
   border: none;
+}
+
+.main .schedule .show-hw tr td select {
+  padding: 0.3rem 3rem 0.3rem 0.3rem;
+}
+
+.main .schedule .students .fas {
+  color: rgb(130, 208, 235);
+  padding: 0;
+  margin: 0;
 }
 
 .main .schedule .students input[type="radio"] {
